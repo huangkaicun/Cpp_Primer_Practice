@@ -13,15 +13,31 @@ int fact(int i)
     return i > 1 ? i * fact(i - 1) : 1;
 }
 
+/// @brief 
+
+// void interactive_fact()
+// {
+//     string const prompt = "Enter a number within [1, 13) :\n";
+//     string const out_of_range = "Out of range, please try again.\n";
+//     for (int i; cout << prompt, cin >> i; )
+//     {
+//         if (i < 1 || i > 12)
+//         {
+//             cout << out_of_range;
+//             continue;
+//         }
+//         cout << fact(i) << endl;
+//     }
+// }
 void interactive_fact()
 {
-    string const prompt = "Enter a number within [1, 13) :\n";
-    string const out_of_range = "Out of range, please try again.\n";
-    for (int i; cout << prompt, cin >> i; )
+    string const prompt = "Enter a number withim [ 1, 23]";
+    string const out_of_range = "Out of range, please try again.";
+    for (int i; cout << prompt, cin >> i;)
     {
-        if (i < 1 || i > 12)
+        if (i < 1 || i > 22)
         {
-            cout << out_of_range;
+            cout << out_of_range << endl;
             continue;
         }
         cout << fact(i) << endl;
@@ -29,25 +45,24 @@ void interactive_fact()
 }
 //q
 //q: 请帮我补充注释
-//a: 
-/// @brief  
-/// @param str1 
-/// @param str2 
-/// @return 
-bool str_subrange(const string &str1, const string &str2){
-    if(str1.size()==str2.size())
-        return str1==str2;
-    string::size_type size={min(str1.size(),str2.size())};
-    string::size_type i=0;
-    while(i!=size){
-        if(str1[i]!=str2[i])
-        return ; //error! no return value!
- }
-}
+// /// @brief  
+// /// @param str1 
+// /// @param str2 
+// /// @return 
+// bool str_subrange(const string &str1, const string &str2){
+//     if(str1.size()==str2.size())
+//         return str1==str2;
+//     string::size_type size={min(str1.size(),str2.size())};
+//     string::size_type i=0;
+//     while(i!=size){
+//         if(str1[i]!=str2[i])
+//         return  ; //error! no return value!
+//  }
+// }
 
 int main()
 {
-//    interactive_fact();
-    str_subrange();
-    return 0;
+   interactive_fact();
+    // str_subrange();
+   return 0;
 }
