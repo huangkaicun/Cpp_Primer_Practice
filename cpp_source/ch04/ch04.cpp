@@ -8,6 +8,8 @@ using namespace std;
 
 int q_4_28()
 {
+    //q: 为什么会有两个endl?
+    //a: 一个是输出换行，一个是输出空行
     cout << "bool:\t\t" << sizeof(bool) << " bytes" << endl << endl;
 
     cout << "char:\t\t" << sizeof(char) << " bytes" << endl;

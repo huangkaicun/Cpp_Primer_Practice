@@ -18,7 +18,7 @@ int divide(int a, int b){
 }
 
 int main(){
-    int a = 1, b = 0, res;
+    int a = 1000, b = 10, res;
     try{
         res = divide(a, b);
         cout << res << endl;

@@ -42,13 +42,26 @@
 #include <iostream>
 #include <string>
 
+//q:friend 这个是干什么的？
+//a:友元函数，可以访问类的私有成员
 class Sales_item {
 // these declarations are explained section 7.2.1, p. 270 
 // and in chapter 14, pages 557, 558, 561
 friend std::istream& operator>>(std::istream&, Sales_item&);
 friend std::ostream& operator<<(std::ostream&, const Sales_item&);
+
+//q: < 这个是干什么的？
+//a:重载运算符
+//q: operator 后跟<, = , >, ==, 等等是干什么的？
+//a:重载运算符
+//q: 为什么要重载运算符？
+//a:因为有些运算符不能直接用于类的对象，比如+，-，*，/，=，[]，()，->，等等
 friend bool operator<(const Sales_item&, const Sales_item&);
 friend bool 
+//q: operator 是干什么的？
+//a:重载运算符
+//q: 为什么要重载运算符？
+//a:因为有些运算符不能直接用于类的对象，比如+，-，*，/，=，[]，()，->，等等
 operator==(const Sales_item&, const Sales_item&);
 public:
     // constructors are explained in section 7.1.4, pages 262 - 265

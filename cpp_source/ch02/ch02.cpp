@@ -6,12 +6,17 @@
 #include <iostream>
 #include "Sales_item.h"
 
+// void basic_class(){
+//     Sales_item book;
+//     std::cin >> book;
+//     std::cout << book << std::endl;
+// }
+
 void basic_class(){
     Sales_item book;
     std::cin >> book;
     std::cout << book << std::endl;
 }
-
 void q_2_3(){
     unsigned u = 10, u2 = 42;
     std::cout << u2 - u << std::endl;
@@ -36,19 +41,66 @@ struct Sale_data
     unsigned units_sold = 0;
     double revenue = 0.0;
 };
+//q: unsigned units_sold = 0; 为什么不是 unsigned units_sold(0); ？
+//a: 两者都可以，但是unsigned units_sold = 0;更简洁
 
-int q_1_5_1()
-{
+
+// struct Sales_data{
+//     std::string bookNo;
+//     unsigned units_sold = 0;
+//     double revenue = 0.0;
+// }
+
+// int q_1_5_1()
+// {
+//     Sale_data book;
+//     double price;
+//     std::cin >> book.bookNo >> book.units_sold >> price;
+//     book.revenue = book.units_sold * price;
+//     std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << price;
+
+//     return 0;
+// }
+
+int q_1_5_1(){
     Sale_data book;
     double price;
+    //q: 为什么要cin>>book.bookNo>>book.units_sold>>price; ?
+    //a: 因为book.bookNo, book.units_sold, price都是变量，需要从键盘输入
     std::cin >> book.bookNo >> book.units_sold >> price;
     book.revenue = book.units_sold * price;
+    //q: std::cout << book.bookNo << "" << book.units_solid << "" << book.revenue << "" << price; 这是什么意思？
+    //a: std::cout是输出流，<<是输出运算符，book.bookNo, book.units_sold, book.revenue, price是输出的内容
     std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << price;
-
-    return 0;
 }
 
 // 1.5.2
+// int q_1_5_2()
+// {
+//     Sale_data book1, book2;
+//     double price1, price2;
+//     std::cin >> book1.bookNo >> book1.units_sold >> price1;
+//     std::cin >> book2.bookNo >> book2.units_sold >> price2;
+//     book1.revenue = book1.units_sold * price1;
+//     book2.revenue = book2.units_sold * price2;
+
+//     if (book1.bookNo == book2.bookNo)
+//     {
+//         unsigned totalCnt = book1.units_sold + book2.units_sold;
+//         double totalRevenue = book1.revenue + book2.revenue;
+//         std::cout << book1.bookNo << " " << totalCnt << " " << totalRevenue << " ";
+//         if (totalCnt != 0)
+//             std::cout << totalRevenue / totalCnt << std::endl;
+//         else
+//             std::cout << "(no sales)" << std::endl;
+//         return 0;
+//     }
+//     else
+//     {
+//         std::cerr << "Data must refer to same ISBN" << std::endl;
+//         return -1;  // indicate failure
+//     }
+// }
 int q_1_5_2()
 {
     Sale_data book1, book2;
@@ -74,6 +126,7 @@ int q_1_5_2()
         std::cerr << "Data must refer to same ISBN" << std::endl;
         return -1;  // indicate failure
     }
+    
 }
 
 // 1.6
@@ -125,7 +178,21 @@ int q_1_6()
     }
 }
 
+int q_1_6()
+{
+    Sale_data total;
+    double totalPrice;
+    if (std::ci >> total.bookNo >> total.revenue >> total.units_sold)
+    {
 
+        std::cout << total.bookNo << " " << total.units_sold << " " << total.revenue << " ";
+
+
+    }
+    
+
+
+}
 int main(){
 //    q_2_3();
 //    q_1_5_1();

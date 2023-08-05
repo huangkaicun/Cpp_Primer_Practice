@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-using namespace std
+using namespace std;
 
 int fact(int i)
 {
@@ -27,7 +27,13 @@ void interactive_fact()
         cout << fact(i) << endl;
     }
 }
-
+//q
+//q: 请帮我补充注释
+//a: 
+/// @brief  
+/// @param str1 
+/// @param str2 
+/// @return 
 bool str_subrange(const string &str1, const string &str2){
     if(str1.size()==str2.size())
         return str1==str2;
@@ -36,7 +42,7 @@ bool str_subrange(const string &str1, const string &str2){
     while(i!=size){
         if(str1[i]!=str2[i])
         return ; //error! no return value!
-  }
+ }
 }
 
 int main()
