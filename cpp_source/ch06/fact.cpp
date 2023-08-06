@@ -11,6 +11,7 @@ int fact(int val)
     else return val * fact(val-1);
 }
 
+
 int func()
 {
     int n, ret = 1;
